@@ -197,7 +197,7 @@ incrementSerial $BackupPath/$ReverseMasterFile.new > $BackupPath/$ReverseMasterF
 # Ensure the owner/group and modes are set at default
 # then overwrite the original files
 date_echo "Overwriting with updated files: $ForwardMasterFile $ReverseMasterFile"
-if ! chown nobody:nobody $BackupPath/$ForwardMasterFile.bumped $BackupPath/$ReverseMasterFile.bumped ; then
+if ! chown DNSServer:DNSServer $BackupPath/$ForwardMasterFile.bumped $BackupPath/$ReverseMasterFile.bumped ; then
   date_echo "Error:  Cannot change file ownership"
   date_echo ""
   date_echo "Try running this script as root for correct permissions"
